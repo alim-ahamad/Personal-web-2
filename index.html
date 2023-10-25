@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title tag -->
+    <title>Personal 2.0</title>
+
+    <!-- CSS stylesheet tag -->
+    <link rel="stylesheet" href="theme-change-style.css">
+
+    <!-- Font awesome code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- J-Querry Code [ for theme change ] -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#theme-click").click(function(){
+                $(".theme-colors").toggle(1000);
+            });
+        });
+    </script>
+
+    <!-- java script code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body >
+
+    <!-- theme switch section started -->
+   
+    <div class="theme-switcher">
+
+        <div class="theme">
+            <div class="theme-toggle">
+                <a id="theme-click"><i class="fa-solid fa-cog fa-spin"></i></a>
+                    <a class="darklight">
+                        <i class="fa "></i>
+                    </a>
+            </div>
+        </div>
+
+        <div class="theme-colors">
+            <h3>Theme</h3>
+            <a class="color-1" onclick="myFunction_color1()"> </a>
+            <a class="color-2" onclick="myFunction_color2()"> </a>
+            <a class="color-3" onclick="myFunction_color3()"> </a>
+            <a class="color-4" onclick="myFunction_color4()"> </a>
+            <a class="color-5" onclick="myFunction_color5()"> </a>
+        </div>
+    </div>
+
+    <!-- theme color change script started -->
+
+    <script>
+        var r = document.querySelector(":root",".dark");
+
+        function myFunction_color1() {
+            r.style.setProperty('--skin--color','blue');
+        }
+        function myFunction_color2() {
+            r.style.setProperty('--skin--color','purple');
+        }
+        function myFunction_color3() {
+            r.style.setProperty('--skin--color','green');
+        }
+        function myFunction_color4() {
+            r.style.setProperty('--skin--color','crimson');
+        }
+        function myFunction_color5() {
+            r.style.setProperty('--skin--color','pink');
+        }
+
+    </script> 
+
+    <!-- <script>
+        var r = document.querySelector(":root");
+
+        function myFunction_color1() {
+            r.style.setProperty('--skin--color','blue');
+        }
+        function myFunction_color2() {
+            r.style.setProperty('--skin--color','purple');
+        }
+        function myFunction_color3() {
+            r.style.setProperty('--skin--color','green');
+        }
+        function myFunction_color4() {
+            r.style.setProperty('--skin--color','crimson');
+        }
+        function myFunction_color5() {
+            r.style.setProperty('--skin--color','pink');
+        }
+
+    </script>  -->
+
+
+    <!-- theme color change script ended -->
+
+    <!-- theme dark light change script started -->
+
+    <script>
+        const draklight = document.querySelector(".darklight");
+        draklight.addEventListener("click", () =>{
+            draklight.querySelector("i").classList.toggle("fa-sun");
+            draklight.querySelector("i").classList.toggle("fa-moon");
+            document.body.classList.toggle("dark");
+        })
+        window.addEventListener("load", () =>
+        {
+            if(document.body.classList.contains("dark"))
+            {
+                draklight.querySelector("i").classList.add("fa-sun");
+            }
+            else{
+                draklight.querySelector("i").classList.add("fa-moon");
+            }
+        })
+    </script>
+
+    <!-- theme dark light change script ended -->
+
+    <!-- theme switch section ended -->
+
+
+
+    <!-- navbar section started -->
+    
+    <div class="toggle-nav" >
+        <i class="fa fa-bars" ></i>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".toggle-nav").click(function(){
+                $("nav").toggleClass("show");
+            });
+        });
+    </script>
+
+    <nav>
+        <div class="logo"><a>A<span>lim</span></a></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#home" ><i class="fa fa-home"></i>home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>about</a></li>
+                <li><a href="#services"><i class="fa fa-list"></i>services</a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>portfolio</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- navbar section ended -->
+
+
+
+    <!-- home section started -->
+
+    <section id="home">
+    
+        <div class="hello">
+            <h2>Hello, My name is <span >Alim Ahamad. </span></h2>
+            <h3>I'm a <span class="typing-home"></span></h3>
+
+            <script>
+                var typed = new Typed(".typing-home",
+                {
+                    strings:["Web Designer","Gamer","Youtuber","Student"],
+                    typeSpeed:120,
+                    BackSpeed:60,
+                    loop:true
+                })
+            </script>
+
+            <p>Alim Ahamad: Final year BCA student, avid web developer, and gaming enthusiast. Combining coding prowess with a creative touch to craft seamless online experiences. Ready to make a mark in web development.</p>
+            
+            <a href="#" class="btn">More About Me</a>
+
+        </div>
+
+        <div class="user-img" >
+            <img src="theme-change-user.jpg" oncontextmenu="return false">
+        </div>
+
+
+    </section>
+
+    <!-- home section ended -->
+
+    <!-- about section started  -->
+
+    <section id="about" >
+        <h1 class="heading">About <span>Me</span> </h1>
+
+        <div class="about-container">
+            <h3>I'm Alim Ahamad and <span>Web Developer.</span></h3>
+            <p>Greetings! I'm Alim Ahamad, a final year BCA student with a passion for web development. With a sharp eye for detail and a flair for coding, I specialize in crafting seamless online experiences. When I'm not coding, you'll find me immersed in virtual worlds, exploring new realms and honing my problem-solving skills. As graduation approaches, I look forward to contributing my skills to innovative projects and making a mark in the field of web development.</p>
+        </div>
+
+        <div class="about-content">
+            <div class="info-row">
+                <h2>Personal Details :</h2>
+                <div class="info-column">
+                <div class="infos">
+                    <h4>birthday: </h4><p>31 march 2005</p>
+                </div>
+                <div class="infos">
+                    <h4>age: </h4><p>17</p>
+                </div>
+                <div class="infos">
+                    <h4>qualification: </h4><p>intermedaite</p>
+                </div>
+                <div class="infos" id="info-phone">
+                    <h4>phone: </h4><p>+91 9410069***</p>
+                </div>
+                <div class="infos">
+                    <h4>country: </h4><p>India</p>
+                </div>
+                <div class="infos">
+                    <h4>city: </h4><p>bareilly</p>
+                </div>
+                <div class="infos-resp">
+                <div class="infos">
+                    <h4>email: </h4><p style="text-transform:lowercase ;">ahamadalim65@gmail.com</p>
+                </div>
+                </div>
+            </div>
+
+                <a href="#" class="btn">Download CV</a>
+                <a href="#" class="btn">Hire Me</a>
+
+            </div>
+
+            <div class="skill-row">
+                <h2>Skills :</h2>
+                <div class="input-fields">
+                    <meter min="0" max="100" value="80" class="html"></meter>  
+                    <meter min="0" max="100" value="70" class="css"></meter>  
+                    <meter min="0" max="100" value="24" class="js"></meter>  
+                    <meter min="0" max="100" value="10" class="c"></meter>  
+                     
+                     
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- about section ended -->
+
+
+    <!-- services section started -->
+
+
+    <section id="services">
+        <h1 class="heading"> Services </h1>
+        <div class="srv-container">
+            <div class="srv-content">
+                <div class="srv-main">
+                    <i class="fa fa-mobile"></i>
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum Omnis em nulla in minima! Dolorum!Lorem ipsum Omnis em nulla in minima! Dolorum!</p>
+                    <a class="btn">Read More</a>
+                </div>
+                <div class="srv-main">
+                    <i class="fa fa-laptop" id="set_pad"></i>
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsumid exercitationem nulla in minima! Dolorum!Lorem ipsum Omnis em nulla in minima! Dolorum!</p>
+                    <a class="btn">Read More</a>
+                </div>
+                <div class="srv-main">
+                    <i class="fa fa-palette"></i>
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum Omnis em nulla in minima! Dolorum!Lorem ipsum Omnis em nulla in minima! Dolorum!</p>
+                    <a class="btn">Read More</a>
+                </div>
+                <div class="srv-main for-load">
+                    <i class="fa fa-tags"></i>
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum Omnis em nulla in minima! Dolorum!Lorem ipsum Omnis em nulla in minima! Dolorum!</p>
+                    <a class="btn">Read More</a>
+                </div>
+                <div class="srv-main for-load">
+                    <i class="fa fa-search"></i>
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum Omnis em nulla in minima! Dolorum!Lorem ipsum Omnis em nulla in minima! Dolorum!</p>
+                    <a class="btn">Read More</a>
+                </div>
+                <div class="srv-main for-load">
+                    <i class="fa fa-cloud" id="set_pad"></i>
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum Omnis em nulla in minima! Dolorum!Lorem ipsum Omnis em nulla in minima! Dolorum!</p>
+                    <a class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div id="load">
+            <a class="btn" id="load-more" >Load More</a>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#load-more").click(function(){
+                    $(".for-load").toggleClass("show");
+                });
+            });
+            $(document).ready(function(){
+                $("#load-more").click(function(){
+                    $("#load").hide();
+                });
+            });
+        </script>
+    </section>
+
+    <!-- services section ended -->
+
+
+
+    <!-- portfolio section started -->
+
+    <section id="portfolio">
+
+        <h1 class="heading"> Latest <span> Projects </span></h1>   
+        
+        <div class="port-container">
+
+            <div class="port-row">
+
+                <div class="port-items">
+                    <div class="inner">
+                        <div class="thumb">
+                            <a><span class="category">Reviews</span></a>
+                            <a><img src="Spark-Connections.png"></a>
+                        </div>
+                        <div class="details">
+                            <h3> I Tried to make  responsive dating site.
+                            </h3>
+                            <ul>
+                                <li>09 July 2022</li>
+                                <li>- Alim</li>
+                            </ul>
+                        </div>
+                        <a href="https://alim-ahamad.github.io/Spark-Connections/" class="btn">Visit</a>
+                    </div>
+                </div>
+                <div class="port-items">
+                    <div class="inner">
+                        <div class="thumb">
+                            <a><span class="category">Reviews</span></a>
+                            <a><img src="Axton.png"></a>
+                        </div>
+                        <div class="details">
+                            <h3> My first Personal website.
+                                (RESPONSIVE) </h3>
+                            <ul>
+                                <li>25 January 2022</li>
+                                <li>- Alim</li>
+                            </ul>
+                        </div>
+                        <a href="https://alim-ahamad.github.io/personal-web/" class="btn">Visit</a>
+                    </div>
+                </div>
+                <div class="port-items">
+                    <div class="inner">
+                        <div class="thumb">
+                            <a><span class="category">Reviews</span></a>
+                            <a><img src="Time-line.png"></a>
+                        </div>
+                        <div class="details">
+                            <h3> time-line content web</h3>
+                            <ul>
+                                <li>25 July 2022</li>
+                                <li>- Alim</li>
+                            </ul>
+                        </div>
+                        <a href="http://alim.great-site.net/love-index.html" class="btn">Visit</a>
+                    </div>
+                </div>
+                <div class="port-items portfolio-show" >
+                    <div class="inner">
+                        <div class="thumb">
+                            <a><span class="category">Reviews</span></a>
+                            <a><img src="Gaming-Hub.png"></a>
+                        </div>
+                        <div class="details">
+                            <h3> First try to make Gaming Website.</h3>
+                            <ul>
+                                <li>20 February 2022</li>
+                                <li>- Alim</li>
+                            </ul>
+                        </div>
+                        <a href="https://alim-ahamad.github.io/game-sell/" class="btn">Visit</a>
+                    </div>
+                </div>
+                <div class="port-items portfolio-show" >
+                    <div class="inner">
+                        <div class="thumb">
+                            <a><span class="category">Reviews</span></a>
+                            <a><img src="Div-Slider.png"></a>
+                        </div>
+                        <div class="details">
+                            <h3> best app to use in your life before die</h3>
+                            <ul>
+                                <li>20 February 2022</li>
+                                <li>- Alim</li>
+                            </ul>
+                        </div>
+                        <a href="http://alim.great-site.net" class="btn">Visit</a>
+                    </div>
+                </div>
+                <div class="port-items portfolio-show" >
+                    <div class="inner">
+                        <div class="thumb">
+                            <a><span class="category">Reviews</span></a>
+                            <a><img src="Personal-2-0.png"></a>
+                        </div>
+                        <div class="details">
+                            <h3> Banaya toh contact ke liye tha easy sharing.</h3>
+                            <ul>
+                                <li>02 January 2022</li>
+                                <li>- Alim</li>
+                            </ul>
+                        </div>
+                        <a href="http://alim.great-site.net/Social%20Links.html" class="btn">Visit</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="show-more">
+            <a class="btn">Show More</a>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                $("#show-more").click(function(){
+                    $(".portfolio-show").show(1000);
+                });
+            });
+
+            $(document).ready(function(){
+                $("#show-more").click(function(){
+                    $("#show-more").hide(2000);
+                })
+            });
+        </script>
+
+    </section>
+
+    <!-- portfolio section ended -->
+
+
+
+    <!-- contact section started -->
+
+    <section id="contact">
+
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <div class="contact-container1">
+            <h3>Have You Any Questions?</h3>
+            <h4>I'm At Your Service</h4>
+        </div>
+            <div class="contact-content1">
+                <div class="contact-main1">
+                    <i class="fa fa-phone"></i>
+                    <h5>Call Us On</h5>
+                    <p>+91 9140069***</p>
+                </div>
+                <div class="contact-main1">
+                    <i class="fa fa-location-dot"></i>
+                    <h5>Location</h5>
+                    <p> Mat A Bhai </p>
+                </div>
+                <div class="contact-main1">
+                    <i class="fa fa-envelope"></i>
+                    <h5>Email</h5>
+                    <p>ahamadalim65@gmail.com</p>
+                </div>
+                <div class="contact-main1">
+                    <i class="fa fa-user"></i>
+                    <h5>Instagram</h5>
+                    <p><a href="https://www.instagram.com/supreme_alim" >supreme_alim</a></p>
+                </div>
+            </div>
+
+            <div class="contact-container1">
+                <h3 >SEND ME AN EMAIL</h3>
+                <h4 >I'M VERY RESPONSIVE TO MESSAGES</h4>
+            </div>
+            <form>
+            <div class="contact-container2">
+                <div class="contact-content2">
+                    <input type="text" placeholder="Enter your name" required>
+                    <input type="email" placeholder="Enter your email">
+                    <input type="text" placeholder="Subject">
+                    <input maxlength="10" type="number" placeholder="Enter your phone number">
+                </div>
+                <div class="contact-main2">
+                    <textarea maxlength="500" placeholder="Your Message" cols="30" rows="10" required ></textarea>
+                </div>
+            </div>
+            <div class="send-msg">
+                <button class="btn">Send Message</button>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- contact section ended -->
+
+</body>
+</html>
